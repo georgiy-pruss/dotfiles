@@ -249,6 +249,11 @@ if exists("c_gnu")
   syn keyword	cType		__label__ __complex__ __volatile__
 endif
 
+" G-: Windows keywords
+syn keyword	cType		HKEY DWORD WORD BOOL LPBYTE TEXT
+" G-: My own keywords
+syn keyword	cType		V C S B I U L K O OWN R
+
 syn keyword	cStructure	struct union enum typedef
 syn keyword	cStorageClass	static register auto volatile extern const
 if exists("c_gnu")
