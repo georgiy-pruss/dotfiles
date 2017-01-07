@@ -20,8 +20,8 @@ syn match   jConditional    "\<goto_[0-9a-z]\+\>"
 syn match   jConditional    "\<label_[0-9a-z]\+\>"
 "syn match  jOperator       "=[.:]"
 
-syn match   jFunction "\(\h\w*\)\( *=[.:] *[1234] \+:\)\@="
-syn match   jVariable "\(\h\w*\)\( *=[.:] *0 \+:\)\@="
+syn match   jVariable "\(\h\w*\)\( *=[.:]\)\@="
+syn match   jFunction "\(\h\w*\)\( *=[.:] *[01234] \+:\)\@="
 
 syn match   jComment  "NB\..*$" contains=jTodo
 syn keyword jTodo     FIXME NOTE NOTES TODO XXX contained
@@ -30,8 +30,10 @@ syn region  jString   start=+'+ end=+'+
 "contains=jSpecial
 "syn match  jSpecial  contained "''"
 
+syn match   jNumber   "\<_\?[\dr]\+\>\.[\dr]\+\%([eE]_\?\d\+\)"
+syn match   jNumber   "\<_\?[\dr]\+[eE]_\?[\dr]\+\>"
 syn match   jNumber   "\<_\?\d\+b[0-9a-z]\+\>"
-syn match   jNumber   "\<_\?\d\+\>"
+syn match   jNumber   "\<_\?\d\+x\?\>"
 syn match   jNumber   "\<_\>"
 syn match   jNumber   "\<_[_.]"
 syn match   jNumber   "\<a[:.]"
@@ -94,7 +96,7 @@ if version >= 508 || !exists("did_j_syn_inits")
   HiLink jConditional  Conditional
   HiLink jOperator     Operator
   HiLink jFunction     Type
-  HiLink jVariable     Type
+  HiLink jVariable     VarDef
   HiLink jComment      Comment
   HiLink jTodo         Todo
   HiLink jString       String
