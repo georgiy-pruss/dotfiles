@@ -47,12 +47,16 @@ hi LineNr term=underline ctermfg=Brown guifg=grey20 guibg=#FFFFE8
 hi CursorLine term=underline cterm=underline guibg=#F0F8FF
 hi CursorColumn term=reverse ctermbg=grey guibg=grey90
 
-hi SpecialChar guifg=Red
+"hi SpecialChar guifg=Red     guibg=#DFE9F2
+hi SpecialChar gui=bold guifg=#002E52
+hi SpecialCharInStr gui=underline guifg=#BF525F
 hi Type guifg=Brown
+hi VarDef guifg=#C02040
 hi Operator guifg=Blue
-hi Comment guifg=#886B60
+"hi Comment guifg=#886B60
+hi Comment gui=italic guifg=#886B60
 hi String guifg=#008080
-hi Number guifg=#DC00F0
+hi Number guifg=#E200F0
 hi Boolean guifg=Red
 hi pythonEscape guifg=Purple
 hi pythonOperator gui=bold guifg=DarkBlue
@@ -61,7 +65,8 @@ hi Function guifg=Blue
 hi Identifier guifg=DarkBlue
 hi Statement term=bold cterm=bold ctermfg=DarkBlue gui=bold guifg=DarkBlue
 hi BoldId term=bold cterm=bold ctermfg=Blue gui=bold guifg=Blue
-hi BoldIdCaps term=bold cterm=bold ctermfg=Magenta gui=bold guifg=Magenta
+hi BoldIdCaps term=bold cterm=bold ctermfg=Magenta gui=bold guifg=#950095
+hi IdCaps ctermfg=Magenta guifg=#950095
 
 " Colors for syntax highlighting
 "hi Constant term=underline ctermfg=DarkRed guifg=Magenta guibg=grey95
